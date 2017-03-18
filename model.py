@@ -30,10 +30,10 @@ class Number(db.Model):
 
     number_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     company_id = db.Column(db.Integer, db.ForeignKey("companies.company_id"), nullable=False)
-    percent_women = db.Column(db.Integer)
-    percent_womentech = db.Column(db.Integer)
-    percent_womenleaders = db.Column(db.Integer)
-    nps_score = db.Column(db.Integer)
+    percent_women = db.Column(db.Float)
+    percent_womentech = db.Column(db.Float)
+    percent_womenleaders = db.Column(db.Float)
+    nps_score = db.Column(db.Float)
     date = db.Column(db.DateTime)
 
     def __repr__(self):

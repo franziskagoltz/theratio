@@ -26,7 +26,7 @@ def load_numbers():
 
     Number.query.delete()
 
-    for row in open("seed_data/companies.txt"):
+    for row in open("seed_data/numbers.txt"):
         row = row.rstrip()
         company_id, percent_women, percent_womentech, percent_womenleaders, nps_score = row.split("|")
         date = datetime.now()
