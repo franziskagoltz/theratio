@@ -32,6 +32,7 @@ class Numbers(db.Model):
     percent_women = db.Column(db.Integer)
     percent_womentech = db.Column(db.Integer)
     percent_womenleaders = db.Column(db.Integer)
+    nps_score = db.Column(db.Integer)
     date = db.Column(db.DateTime)
 
     def __repr__(self):
