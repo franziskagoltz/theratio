@@ -1,51 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="container-fluid survey">
+{# CN: Hardcoding CSS into this file #}
+<div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
-    <h3>Review Facebook</h3>
+    <h3 class="center-survey">Review Facebook</h3>
   </div>
 </div>
   <div class="row">
     <div class="col-xs-12">
-      <form>
-      <h4>How likely or unlikely are you to recommend Facebook to a female friend?</h4>
+      <form id="survey-form" class="center" action="/TBD" method="POST">
+      <h4 class="center">How likely or unlikely are you to recommend working at Facebook to a female friend?</h4>
         <label class="radio-inline">
-          <input type="radio" name="optradio">0
+          <input type="radio" name="optradio" value="0">0
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">1
+          <input type="radio" name="optradio" value="1">1
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">2
+          <input type="radio" name="optradio" value="2">2
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">3
+          <input type="radio" name="optradio" value="3">3
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">4
+          <input type="radio" name="optradio" value="4">4
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">5
+          <input type="radio" name="optradio" value="5">5
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">6
+          <input type="radio" name="optradio" value="6">6
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">7
+          <input type="radio" name="optradio" value="7">7
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">8
+          <input type="radio" name="optradio" value="8">8
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">9
+          <input type="radio" name="optradio" value="9">9
         </label>
         <label class="radio-inline">
-          <input type="radio" name="optradio">10
+          <input type="radio" name="optradio" value="10">10
         </label>
-    <span><p>Not at all likely Extremely likely</p></span>
+    <span>Not at all likely Extremely likely</p></span>
     <div id="survey-input-text">
     <h4><label for="comment">Tell us a bit more about why you chose <span id="survey-score-selected"></span>.</label></h4>
     <textarea class="form-control" rows="5" id="comment"></textarea>
@@ -60,4 +60,7 @@
   </div>
 </div>
 
+<script>
+
+</script>
 {% endblock %}
