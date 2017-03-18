@@ -1,6 +1,24 @@
-.navbar {
-    opacity: 100%;
+#navbar-transparent {
+    background-color: rgba(0,0,0, 0.0) !important;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
 }
+
+#navbar-transparent a {
+    color: white !important;
+}
+
+.transparent-search {
+    background-color: rgba(0,0,0, 0.0) !important;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-button {
+    background-color: rgba(0,0,0, 0.0) !important;
+    color: white !important;
+}
+
 
 h1{
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +46,7 @@ p {
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
 
 .landing-page {
     text-align: center;
@@ -59,5 +78,5 @@ body {
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
-    margin-top: -20px;
+    margin-top: -50px;
 }
