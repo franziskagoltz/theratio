@@ -34,7 +34,21 @@ def display_apple():
 
     name = "Apple"
 
+
     return render_template("company_info.html", name=name)
+
+@app.route('/apple-info.json')
+def apple_info_data():
+    """Chart information for Apple"""
+
+    data_dict = {
+                "labels": [
+                        "\% of women employees overall"],
+                "data:" [32],
+                "backgroundColor": ["#ffffff"]
+    }
+
+    return jsonify(data_dict)
 
 
 @app.route("/company/google")
