@@ -1,3 +1,7 @@
+.navbar {
+    opacity: 100%;
+}
+
 h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 75px;
@@ -49,11 +53,11 @@ body {
 }
 
 .homepage {
-    /*background-image: url(/static/img/homepage.jpg);*/
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/homepage.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
+    margin-top: -20px;
 }
