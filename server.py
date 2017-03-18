@@ -25,21 +25,21 @@ app.jinja_env.auto_reload = True
 def index():
     """renders landing page"""
 
-    pass
+    return render_template("index.html")
 
 
 @app.route("/company/<company_name>")
 def display_info():
     """shows company details"""
 
-    pass
+    return render_template("company_info.html")
 
 
 @app.route("/survey")
 def show_survey():
     """renders survey"""
 
-    pass
+    return render_template("survey.html")
 
 
 
