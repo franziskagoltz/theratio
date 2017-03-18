@@ -1,6 +1,26 @@
-.navbar {
-    opacity: 100%;
+#navbar-transparent {
+    background-color: rgba(0,0,0, 0.0) !important;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
 }
+
+#navbar-transparent a {
+    color: white !important;
+}
+
+.transparent-search {
+    background-color: rgba(0,0,0, 0.0) !important;
+    border: 0;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid white;
+}
+
+.nav-button {
+    background-color: rgba(0,0,0, 0.0) !important;
+    color: white !important;
+}
+
 
 h1{
     font-family: 'Montserrat', sans-serif;
@@ -29,27 +49,33 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
 .landing-page {
     text-align: center;
     color: white;
+    padding-top: 45px;
 }
 
 .circle {
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: 290px;
   border-radius: 50%;
   font-size: 75px;
   color: white;
-  line-height: 300px;
+  line-height: 290px;
   text-align: center;
   display: inline-block;
   border: 6px solid white;
+  background-color: rgba(189, 195, 199, 0.2);
 }
 
 .circle-group {
+    padding-top: 30px;
     display: inline-block;
     display: flex;
     justify-content: space-between;
+    padding-right: 75px;
+    padding-left: 75px;
 }
 
 .homepage {
@@ -59,5 +85,5 @@ body {
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
-    margin-top: -20px;
+    margin-top: -50px;
 }
