@@ -28,11 +28,31 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/company/<company_name>")
+@app.route("/company/apple")
 def display_info():
     """shows company details"""
 
-    return render_template("company_info.html")
+    name = "Apple"
+
+    return render_template("company_info.html", name=name)
+
+
+@app.route("/company/google")
+def display_info():
+    """shows company details"""
+
+    name = "Google"
+
+    return render_template("company_info.html", name=name)
+
+
+@app.route("/company/facebook")
+def display_info():
+    """shows company details"""
+
+    name = "Facebook"
+
+    return render_template("company_info.html", name=name)
 
 
 @app.route("/survey")
