@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 
-class Companies(db.Model):
+class Company(db.Model):
     """Companies in the:ratio."""
 
     __tablename__ = "companies"
@@ -23,7 +23,7 @@ class Companies(db.Model):
             self.company_id, self.name)
 
 
-class Numbers(db.Model):
+class Number(db.Model):
     """diversity numbers"""
 
     __tablename__ = "numbers"
@@ -81,7 +81,7 @@ class Attribute(db.Model):
             self.attribute_id, self.suvery_id)
 
 
-class Respose(db.Model):
+class Response(db.Model):
     """Survey response of the:ratio website."""
 
     __tablename__ = "responses"
@@ -93,5 +93,14 @@ class Respose(db.Model):
     response = db.Column(db.String(200), nullable=False)
 
     def __repr__(self):
-        return "response_id={} response={}".format(
-            self.response_id, self.response)
+        return "response_id={} response={}".format(self.response_id, self.response)
+
+
+def connect_to_db(app, db_uri='postgresql:///theratio'):
+    """Connect the database to our Flask app."""
+
+    # Configure to use our PstgreSQL database
+    app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+    app.config['SQLALCHEMY_ECHO'] = True
+    db.app = app
+    db.init_app(app)
