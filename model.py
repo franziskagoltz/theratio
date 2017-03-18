@@ -28,6 +28,7 @@ class Number(db.Model):
 
     __tablename__ = "numbers"
 
+    number_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     company_id = db.Column(db.Integer, db.ForeignKey("companies.company_id"), nullable=False)
     percent_women = db.Column(db.Integer)
     percent_womentech = db.Column(db.Integer)
