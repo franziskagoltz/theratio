@@ -2,4 +2,62 @@
 
 {% block content %}
 
+<div class="container-fluid survey">
+  <div class="row">
+    <div class="col-xs-12">
+    <h3>Review Facebook</h3>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-xs-12">
+      <form>
+      <h4>How likely or unlikely are you to recommend Facebook to a female friend?</h4>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">0
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">7
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">8
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">9
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">10
+        </label>
+    <span><p>Not at all likely Extremely likely</p></span>
+    <div id="survey-input-text">
+    <h4><label for="comment">Tell us a bit more about why you chose <span id="survey-score-selected"></span>.</label></h4>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <div class="checkbox">
+      <label><input type="checkbox">Check if we can share your feedback on the site</label>
+  </div>
+  </div>
+
+  <button type="survey-submit" class="btn btn-default">Contribute</button>
+    </form>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
