@@ -1,51 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{# CN: Hardcoding CSS into this file #}
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12">
-    <h3 class="center-survey">Review Facebook</h3>
+    <div class="col-xs-12" align="center">
+    <h3 class="survey-text">Review Apple</h3>
   </div>
 </div>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="offset-sm-2">
+    </div>
+    <div class="col-xs-8 survey-text">
       <form id="survey-form" class="center" action="/TBD" method="POST">
-      <h4 class="center">How likely or unlikely are you to recommend working at Facebook to a female friend?</h4>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="0">0
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="1">1
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="2">2
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="3">3
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="4">4
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="5">5
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="6">6
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="7">7
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="8">8
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="9">9
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio" value="10">10
-        </label>
-    <span>Not at all likely Extremely likely</p></span>
+      <h4 id="survey-question-nps">How likely or unlikely are you to recommend working at Apple to a female friend?</h4>
+      <table class="table" align="center">
+        <tbody>
+        <tr>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="0">0</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="1">1</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="2">2</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="3">3</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="4">4</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="5">5</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="6">6</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="7">7</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="8">8</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="9">9</label></td>
+         <td><label class="radio-inline"><input type="radio" name="optradio" value="10">10</label></td>
+      </tr>
+      <tr>
+        <td><span class="survey-text-smaller survey-text">Not at all likely</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Extremely likely</td>
+      </tr>
+    </table>
     <div id="survey-input-text">
     <h4><label for="comment">Tell us a bit more about why you chose <span id="survey-score-selected"></span>.</label></h4>
     <textarea class="form-control" rows="5" id="comment"></textarea>
@@ -56,8 +53,10 @@
 
   <button type="survey-submit" class="btn btn-default">Contribute</button>
     </form>
+    
     </div>
   </div>
+</div>
 </div>
 
 <script>

@@ -29,7 +29,7 @@ def index():
 
 
 @app.route("/company/apple")
-def display_info():
+def display_apple():
     """shows company details"""
 
     name = "Apple"
@@ -38,7 +38,7 @@ def display_info():
 
 
 @app.route("/company/google")
-def display_info():
+def display_google():
     """shows company details"""
 
     name = "Google"
@@ -47,7 +47,7 @@ def display_info():
 
 
 @app.route("/company/facebook")
-def display_info():
+def display_facebook():
     """shows company details"""
 
     name = "Facebook"
