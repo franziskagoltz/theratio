@@ -42,6 +42,12 @@ def show_survey():
     return render_template("survey.html")
 
 
+@app.route("/faq")
+def faq():
+    """renders faq page"""
+
+    return render_template("faq.html")
+
 
 if __name__ == "__main__":
     # We have to set debug=True here, since it has to be True at the
