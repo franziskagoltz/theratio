@@ -28,14 +28,14 @@ def index():
     pass
 
 
-@app.route("company/<company_name>")
+@app.route("/company/<company_name>")
 def display_info():
     """shows company details"""
 
     pass
 
 
-@app.route("survey")
+@app.route("/survey")
 def show_survey():
     """renders survey"""
 
