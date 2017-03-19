@@ -150,4 +150,6 @@ h5.survey-introduction,
 .faq-copy {
     color: white;
     margin-top: 150px;
+    width: 70%;
+    margin-left: 15%;
 }
