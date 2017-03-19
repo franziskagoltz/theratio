@@ -36,7 +36,8 @@ def index():
 def display_apple():
     """shows company details"""
 
-    name = "Apple"
+    name = "APPLE, INC."
+    score = "3.2"
 
     trace1 = go.Bar(
     y=['# women', '# women - tech', '# women - leadership'],
@@ -73,26 +74,64 @@ def display_apple():
 
 
     return render_template("company_info.html", name=name,
-                                                data=data)
+                                                data=data,
+                                                score=score)
 
+
+@app.route("/apple-info.json")
+def apple_info_data():
+    """Chart information for Apple"""
+
+    data_dict = {
+                "labels": ["women overall"],
+                "datasets": [
+                {
+                    "data": [32],
+                    "backgroundColor": ["#ec008c"],
+                    "hoverBackgroundColor": ["#ec008c"]
+                }]}
+
+    # data_dict = {
+    #     "labels": [
+    #     "Christmas Melon",
+    #     "Crenshaw",],
+    #     "datasets": [
+    #                 {
+    #                 "data": [300, 50],
+    #                 "backgroundColor": [
+    #                 "#FF6384",
+    #                 "#36A2EB",
+    #                     ],
+    #                     "hoverBackgroundColor": [
+    #                         "#FF6384",
+    #                         "#36A2EB",
+    #                     ]
+    #                 }]
+    #         }
+
+
+    return jsonify(data_dict)
+>>>>>>> 769814b2735f15c225a0bd9a06eaac48ba44ba56
 
 
 @app.route("/company/google")
 def display_google():
     """shows company details"""
 
-    name = "Google"
+    name = "GOOGLE"
+    score = "3.0"
 
-    return render_template("company_info.html", name=name)
+    return render_template("company_info.html", name=name, score=score)
 
 
 @app.route("/company/facebook")
 def display_facebook():
     """shows company details"""
 
-    name = "Facebook"
+    name = "FACEBOOK, INC."
+    score = "3.0"
 
-    return render_template("company_info.html", name=name)
+    return render_template("company_info.html", name=name, score=score)
 
 
 @app.route("/survey")
