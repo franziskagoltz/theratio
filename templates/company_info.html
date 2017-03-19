@@ -15,15 +15,10 @@
     </div>
     <br><br>
     <h4>OVERALL RATING</h4><br><br>
-    <button type="button" id="breakdown" class="btn btn-secondary btn-lg"><h4>BREAKDOWN</h4></button>
-    <a href="/survey">
-    <button type="button"  class="btn btn-secondary btn-lg"><h4>CONTRIBUTE</h4></button>
-    </a>
     <div style="text-align:center;">
       <button type="button" class="btn btn-secondary btn-lg"><h4>BREAKDOWN</h4></button>
-      <span>    </span>
-      <button type="button" class="btn btn-secondary btn-lg"><h4>CONTRIBUTE</h4></button>
-  </div>
+      <a href="/survey"><button type="button" class="btn btn-secondary btn-lg"><h4>CONTRIBUTE</h4></button></a>
+    </div>
     <br>
 
     <div class="landing-page">
@@ -37,7 +32,7 @@
             var myData = {{ data|tojson|safe }};
             MY_CHART = document.getElementById("chart");
             Plotly.plot(MY_CHART,
-                        myData); 
+                        myData);
 
 
         </script>
