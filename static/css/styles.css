@@ -104,6 +104,11 @@ body {
     padding-top: 45px;
 }
 
+#company-site {
+    display: block;
+    margin: auto;
+}
+
 h1.survey-review,
 h3.survey-review {
     letter-spacing: 10px;
