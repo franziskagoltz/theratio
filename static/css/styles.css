@@ -89,11 +89,17 @@ body {
 }
 
 .company-info {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/apple.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/static/img/apple.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
     margin-top: -50px;
+}
+
+.company-page {
+    text-align: center;
+    color: white;
+    padding-top: 45px;
 }
