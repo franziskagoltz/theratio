@@ -105,9 +105,9 @@ def show_survey():
     return render_template("survey.html")
 
 
-@app.route("/faq")
+@app.route("/about")
 def faq():
-    """renders faq page"""
+    """renders about page"""
 
     return render_template("faq.html")
 
