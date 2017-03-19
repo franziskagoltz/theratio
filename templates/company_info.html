@@ -2,4 +2,32 @@
 
 {% block content %}
 
+<script src="/static/js/apple.js"></script>
+
+<div class="container-fluid company-info">
+
+    <div class="company-page">
+        <h1>{{ name }}</h1><br>
+    </div>
+
+    <div class="circle-group">
+        <div class="company-bubble">
+            <div class="circle">3.2</div> <br>
+            <h3>OVERALL RATING</h3><br>
+        </div>
+    </div><br>
+
+    <div class="landing-page">
+    <h2>If you've worked at {{ name}}, we would love to hear from you.</h2>
+    </div>
+
+</div>
+
+<div>
+    <div class="apple-chart">
+    <canvas id="barChart"></canvas>
+    <div id="barLegend" class="bar-legend"></div>
+
+</div>
+
 {% endblock %}
