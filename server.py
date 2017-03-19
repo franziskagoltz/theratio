@@ -6,6 +6,10 @@ from flask import Flask, jsonify, render_template, redirect, request, flash, ses
 
 from flask_debugtoolbar import DebugToolbarExtension
 
+import plotly.plotly as py
+
+import plotly.graph_objs as go
+
 
 app = Flask(__name__)
 
@@ -35,7 +39,43 @@ def display_apple():
     name = "APPLE, INC."
     score = "3.2"
 
-    return render_template("company_info.html", name=name, score=score)
+    trace1 = go.Bar(
+    y=['# women', '# women - tech', '# women - leadership'],
+    x=[32, 23, 28],
+    name='Women @ Apple',
+    orientation = 'h',
+    marker = dict(
+        color = '#ec008c',
+        line = dict(
+            color = '#ec008c',
+            width = 3)
+        )
+    )
+    trace2 = go.Bar(
+        y=['# women', '# women - tech', '# women - leadership'],
+        x=[100, 100, 100],
+        name='Apple Overall',
+        orientation = 'h',
+        marker = dict(
+            color = '#b7b7b7',
+            line = dict(
+                color = '#b7b7b7',
+                width = 3)
+        )
+    )
+
+    data = [trace1, trace2]
+    layout = go.Layout(
+        barmode='stack'
+    )
+
+    # fig = go.Figure(data=data, layout=layout)
+    # plot = py.iplot(fig, filename='marker-h-bar')
+
+
+    return render_template("company_info.html", name=name,
+                                                data=data,
+                                                score=score)
 
 
 @app.route("/apple-info.json")
@@ -71,6 +111,7 @@ def apple_info_data():
 
 
     return jsonify(data_dict)
+>>>>>>> 769814b2735f15c225a0bd9a06eaac48ba44ba56
 
 
 @app.route("/company/google")

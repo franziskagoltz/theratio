@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<script src="/static/js/apple.js"></script>
+<!-- <script src="/static/js/apple.js"></script> -->
 
 <div class="container-fluid company-info">
 
@@ -23,13 +23,19 @@
     <h2>If you've worked at {{ name}}, we would love to hear from you.</h2>
     </div>
 
+    <div id="chart"></div>
+            <script type="text/javascript">
+            var myData = {{ data|tojson|safe }};
+           MY_CHART = document.getElementById("chart");
+           Plotly.plot(MY_CHART, 
+                        myData);
+        </script>
 </div>
 
-<div>
-    <div class="apple-chart">
-    <canvas id="barChart"></canvas>
-    <div id="barLegend" class="bar-legend"></div>
+
 
 </div>
+
+
 
 {% endblock %}
