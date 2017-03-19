@@ -6,6 +6,10 @@ from flask import Flask, jsonify, render_template, redirect, request, flash, ses
 
 from flask_debugtoolbar import DebugToolbarExtension
 
+import plotly.plotly as py
+
+import plotly.graph_objs as go
+
 
 app = Flask(__name__)
 
@@ -35,42 +39,43 @@ def display_apple():
     name = "APPLE, INC."
     score = "3.2"
 
-    return render_template("company_info.html", name=name, score=score)
+    trace1 = go.Bar(
+    y=['# women', '# women in tech', '# women in leadership'],
+    x=[32, 23, 28],
+    name='Women @ Apple',
+    orientation = 'h',
+    marker = dict(
+        color = '#ec008c',
+        line = dict(
+            color = '#ec008c',
+            width = 3)
+        )
+    )
+    trace2 = go.Bar(
+        y=['# women', '# women in tech', '# women in leadership'],
+        x=[100, 100, 100],
+        name='Apple Overall',
+        orientation = 'h',
+        marker = dict(
+            color = '#b7b7b7',
+            line = dict(
+                color = '#b7b7b7',
+                width = 3)
+        )
+    )
+
+    data = [trace1, trace2]
+    layout = go.Layout(
+        barmode='stack'
+    )
+
+    # fig = go.Figure(data=data, layout=layout)
+    # plot = py.iplot(fig, filename='marker-h-bar')
 
 
-@app.route("/apple-info.json")
-def apple_info_data():
-    """Chart information for Apple"""
-
-    data_dict = {
-                "labels": ["women overall"],
-                "datasets": [
-                {
-                    "data": [32],
-                    "backgroundColor": ["#ec008c"],
-                    "hoverBackgroundColor": ["#ec008c"]
-                }]}
-
-    # data_dict = {
-    #     "labels": [
-    #     "Christmas Melon",
-    #     "Crenshaw",],
-    #     "datasets": [
-    #                 {
-    #                 "data": [300, 50],
-    #                 "backgroundColor": [
-    #                 "#FF6384",
-    #                 "#36A2EB",
-    #                     ],
-    #                     "hoverBackgroundColor": [
-    #                         "#FF6384",
-    #                         "#36A2EB",
-    #                     ]
-    #                 }]
-    #         }
-
-
-    return jsonify(data_dict)
+    return render_template("company_info.html", name=name,
+                                                data=data,
+                                                score=score)
 
 
 @app.route("/company/google")

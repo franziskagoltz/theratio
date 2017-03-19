@@ -103,3 +103,26 @@ body {
     color: white;
     padding-top: 45px;
 }
+
+#company-site {
+    display: block;
+    margin: auto;
+}
+
+h1.survey-review,
+h3.survey-review {
+    letter-spacing: 10px;
+    color: white;
+}
+
+h5.survey-introduction,
+.radio-inline,
+.survey-checkout-text {
+    color: white;
+    line-height: 130%;
+}
+
+.survey-text-smaller {
+    color: white;
+    font-size: small;
+}
