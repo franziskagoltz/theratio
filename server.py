@@ -40,7 +40,7 @@ def display_apple():
     score = "3.2"
 
     trace1 = go.Bar(
-    y=['# women', '# women - tech', '# women - leadership'],
+    y=['# women', '# women in tech', '# women in leadership'],
     x=[32, 23, 28],
     name='Women @ Apple',
     orientation = 'h',
@@ -52,7 +52,7 @@ def display_apple():
         )
     )
     trace2 = go.Bar(
-        y=['# women', '# women - tech', '# women - leadership'],
+        y=['# women', '# women in tech', '# women in leadership'],
         x=[100, 100, 100],
         name='Apple Overall',
         orientation = 'h',
@@ -76,42 +76,6 @@ def display_apple():
     return render_template("company_info.html", name=name,
                                                 data=data,
                                                 score=score)
-
-
-@app.route("/apple-info.json")
-def apple_info_data():
-    """Chart information for Apple"""
-
-    data_dict = {
-                "labels": ["women overall"],
-                "datasets": [
-                {
-                    "data": [32],
-                    "backgroundColor": ["#ec008c"],
-                    "hoverBackgroundColor": ["#ec008c"]
-                }]}
-
-    # data_dict = {
-    #     "labels": [
-    #     "Christmas Melon",
-    #     "Crenshaw",],
-    #     "datasets": [
-    #                 {
-    #                 "data": [300, 50],
-    #                 "backgroundColor": [
-    #                 "#FF6384",
-    #                 "#36A2EB",
-    #                     ],
-    #                     "hoverBackgroundColor": [
-    #                         "#FF6384",
-    #                         "#36A2EB",
-    #                     ]
-    #                 }]
-    #         }
-
-
-    return jsonify(data_dict)
->>>>>>> 769814b2735f15c225a0bd9a06eaac48ba44ba56
 
 
 @app.route("/company/google")
