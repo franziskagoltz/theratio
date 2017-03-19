@@ -40,7 +40,7 @@ def display_apple():
     score = "3.2"
 
     trace1 = go.Bar(
-    y=['# women', '# women in tech', '# women in leadership'],
+    y=['% All', '% Tech', '% Exec'],
     x=[32, 23, 28],
     name='Women @ Apple',
     orientation = 'h',
@@ -52,7 +52,7 @@ def display_apple():
         )
     )
     trace2 = go.Bar(
-        y=['# women', '# women in tech', '# women in leadership'],
+        y=['% All', '% Tech', '% Exec'],
         x=[100, 100, 100],
         name='Apple Overall',
         orientation = 'h',
