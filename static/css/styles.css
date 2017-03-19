@@ -52,8 +52,9 @@ body {
 
 .landing-page {
     text-align: center;
+    display: block;
     color: white;
-    padding-top: 45px;
+    padding-top: 60px;
 }
 
 .circle {
@@ -79,7 +80,7 @@ body {
 }
 
 .homepage {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/img/theratio_homepage.jpg);
+    background: url(/static/img/theratio_homepage.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
