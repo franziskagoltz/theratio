@@ -89,7 +89,7 @@ body {
 }
 
 .company-info {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/static/img/apple.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.), rgba(0, 0, 0, 0.5)), url(/static/img/apple.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -102,22 +102,4 @@ body {
     text-align: center;
     color: white;
     padding-top: 45px;
-}
-
-h1.survey-review,
-h3.survey-review {
-    letter-spacing: 10px;
-    color: white;
-}
-
-h5.survey-introduction,
-.radio-inline,
-.survey-checkout-text {
-    color: white;
-    line-height: 130%;
-}
-
-.survey-text-smaller {
-    color: white;
-    font-size: small;
 }
