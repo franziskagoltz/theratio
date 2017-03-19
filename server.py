@@ -85,7 +85,37 @@ def display_google():
     name = "GOOGLE"
     score = "3.0"
 
-    return render_template("company_info.html", name=name, score=score)
+    trace1 = go.Bar(
+    y=['% All', '% Tech', '% Exec'],
+    x=[31, 19, 24],
+    name='Women @ Google',
+    orientation = 'h',
+    marker = dict(
+        color = '#ec008c',
+        line = dict(
+            color = '#ec008c',
+            width = 3)
+        )
+    )
+    trace2 = go.Bar(
+        y=['% All', '% Tech', '% Exec'],
+        x=[100, 100, 100],
+        name='Google Overall',
+        orientation = 'h',
+        marker = dict(
+            color = '#b7b7b7',
+            line = dict(
+                color = '#b7b7b7',
+                width = 3)
+        )
+    )
+
+    data = [trace1, trace2]
+    layout = go.Layout(
+        barmode='stack'
+    )
+
+    return render_template("company_info.html", name=name, data=data, score=score)
 
 
 @app.route("/company/facebook")
@@ -95,7 +125,37 @@ def display_facebook():
     name = "FACEBOOK, INC."
     score = "3.0"
 
-    return render_template("company_info.html", name=name, score=score)
+    trace1 = go.Bar(
+    y=['% All', '% Tech', '% Exec'],
+    x=[33, 17, 27],
+    name='Women @ Facebook',
+    orientation = 'h',
+    marker = dict(
+        color = '#ec008c',
+        line = dict(
+            color = '#ec008c',
+            width = 3)
+        )
+    )
+    trace2 = go.Bar(
+        y=['% All', '% Tech', '% Exec'],
+        x=[100, 100, 100],
+        name='Facebook Overall',
+        orientation = 'h',
+        marker = dict(
+            color = '#b7b7b7',
+            line = dict(
+                color = '#b7b7b7',
+                width = 3)
+        )
+    )
+
+    data = [trace1, trace2]
+    layout = go.Layout(
+        barmode='stack'
+    )
+
+    return render_template("company_info.html", name=name, data=data, score=score)
 
 
 @app.route("/survey")
