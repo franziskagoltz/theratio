@@ -32,10 +32,11 @@ def index():
 def display_apple():
     """shows company details"""
 
-    name = "Apple"
+    name = "APPLE, INC."
+    score = "3.2"
 
+    return render_template("company_info.html", name=name, score=score)
 
-    return render_template("company_info.html", name=name)
 
 @app.route("/apple-info.json")
 def apple_info_data():
@@ -76,18 +77,20 @@ def apple_info_data():
 def display_google():
     """shows company details"""
 
-    name = "Google"
+    name = "GOOGLE"
+    score = "3.0"
 
-    return render_template("company_info.html", name=name)
+    return render_template("company_info.html", name=name, score=score)
 
 
 @app.route("/company/facebook")
 def display_facebook():
     """shows company details"""
 
-    name = "Facebook"
+    name = "FACEBOOK, INC."
+    score = "3.0"
 
-    return render_template("company_info.html", name=name)
+    return render_template("company_info.html", name=name, score=score)
 
 
 @app.route("/survey")
