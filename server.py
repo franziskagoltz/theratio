@@ -83,7 +83,7 @@ def display_google():
     """shows company details"""
 
     name = "GOOGLE"
-    score = "3.0"
+    score = "2.9"
 
     trace1 = go.Bar(
     y=['% All', '% Tech', '% Exec'],
