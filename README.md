@@ -27,7 +27,7 @@ Developers:
 
 ## <a name="features"></a>Features
 
-Users can immediate view company scores (10 being the highest score possible), and search for companies:
+Users can immediately view company scores (10 being the highest score possible), and search for companies:
 
 <kbd>![App at work](/static/img/theratio_search.gif)</kbd>
 
